@@ -2,7 +2,7 @@
 
 Simple editor via fabric.js
 
-###Editor features:
+### Editor features:
 1. Add photo
 
 2. Drag and Zoom photos
