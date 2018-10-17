@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+
+        <title>Photo Editor</title>
+        <meta name="description" content="photo editor">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <link rel="icon" href="img/favicon.png">
+
+        <meta name="theme-color" content="#000">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse bigBos" id="navbarNav">
+            <ul class="navbar-nav distance">
+                <li class="nav-item">
+                    <div class="custom-file" style="width: 200px">
+                        <input type="file" accept="image/*" class="custom-file-input file-upload" id="imageLoader">
+                        <label class="custom-file-label" for="imageLoader">Choose file</label>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="input-group" style="width: 500px">
+                        <input type="text" class="form-control" aria-label="Text input with dropdown button"
+                               id="inputText" style="height: inherit;">
+                        <div class="input-group-append">
+                            <button class="btn" type=""><input type="color" id="colorChoose"></button>
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false" style="border-radius: 0px;"
+                                    id="textFont">Roboto
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item">Arial</a>
+                                <a class="dropdown-item active">Roboto</a>
+                                <a class="dropdown-item">Calibri</a>
+                            </div>
+                            <button class="btn" id="textAdd">Add text</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="btn-group">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            Add Arrow
+                        </button>
+                        <div class="dropdown-menu" id="arrowAdd">
+                            <a class="dropdown-item" href="#">Black</a>
+                            <a class="dropdown-item" href="#">Blue</a>
+                            <a class="dropdown-item" href="#">Red</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button class="btn" id="deleteImg">Remove active object</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn" id="saveImg">Save as image</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <canvas id="imageCanvas" width="1340px" height="640px"></canvas>
+
+    <script src="libs/fabric.js/dist/fabric.min.js"></script>
+    <script src="libs/reimg-master/reimg.js"></script>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="js/javascript.js"></script>
+    </body>
+</html>
